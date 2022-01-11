@@ -1,1 +1,57 @@
+.button:hover {
+  background-color: cornflowerblue; /* Green */
+  color: black;
+  transition: 2s;
+}
 
+.pic-and-text:hover > .CaptionDescription {
+  animation-name: textShift;
+  animation-duration: 2s;
+  animation-fill-mode: forwards; /* freezes at the end */
+}
+
+.pic-and-text:hover > .CaptionTitle {
+  animation-name: textShift;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* freezes at the end */
+}
+
+.pic-and-text {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1.CaptionTitle {
+  position: absolute;
+  top: 500px;
+  width: 100%;
+  color: white;
+}
+
+p.CaptionDescription {
+  position: absolute;
+  text-align: justify;
+  top: 550px;
+  color: white;
+  padding: 0 10em 0 10em;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@keyframes textShift {
+  from {
+  }
+  to {
+    transform: translate(0, -470px);
+  }
+}
